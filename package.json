@@ -1,0 +1,22 @@
+{
+  "name": "fly-shop",
+  "version": "1.0.0",
+  "description": "An OOP exercise modeling a fly fishing shop",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yang70/flyShop.git"
+  },
+  "author": "Matt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yang70/flyShop/issues"
+  },
+  "homepage": "https://github.com/yang70/flyShop#readme"
+}
