@@ -10,13 +10,19 @@ describe('The Fly Shop', function(){
   it('should be able to stock inventory', function(){
     var shop = new FlyShop('Downtown');
     shop.stockInventory();
-    expect(shop.rods).to.equal(50);
-    expect(shop.reels).to.equal(50);
-    expect(shop.line).to.equal(50);
-    expect(shop.leaders).to.equal(200);
-    expect(shop.waders).to.equal(20);
-    expect(shop.dryFlies).to.equal(500);
-    expect(shop.wetFlies).to.equal(500);
+    var testArray = [shop.rods, shop.reels, shop.line, shop.leaders, shop.waders, shop.dryFlies, shop.wetFlies];
+    function amountTest(element, index){
+      if(index <= 2){
+        expect(element).to.equal(50);
+      } else if(index == 3){
+        expect(element).to.equal(200);
+      } else if(index == 4){
+        expect(element).to.equal(20);
+      } else {
+        expect(element).to.equal(500);
+      }
+    }
+    testArray.forEach(amountTest);
   });
 
   it('should return a list of inventory', function(){
